@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Web3 Eth</title>
+        <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    </head>
+    <body>
+        Contribute:<input type="text" id="contributeText"><input type="button" value="Contribute" onclick="sendEther()">
+        <br><br>Contributors List:
+        <p id="contributorsList"></p>
+        <p>Contributor Amount: <input type="text" id="contributorAmtText"><input type="button" value="Contributor Amount" onclick="contributorAmt()"></p>
+        <p id="contributorAmtResult">Contributed: </p>
+        <br>
+        <input type="button" value="End Contribution Period" onclick="endContriPeriod()">
+        <hr>
+        Submit Proposal:<input type="text" id="submitProposalText">
+        <input type="button" value="Submit Proposal" onclick="submitProposalFunc()">
+        <br><br>List Open Beneficiary Proposals:
+        <p id="openBenList"></p>
+        Beneficiary Address: <input type="text" id="benAmtText"><input type="button" value="Get Beneficiary Amount" onclick="benAmtFunc()">
+        <p id="benAmtResult">Beneficiary Amount: </p>
+        <hr>
+        Vote: <input type="text" id="voteText"><input type="button" value="Approve" onclick="approveBen()"><input type="button" value="Reject" onclick="rejectBen()">
+        <br><br>
+        Get Signer Vote:<br>
+        Signer: <input type="text" id="signerAddrText"><br>
+        Beneficiary: <input type="text" id="benAddrText"><br>
+        <p id="signerVoteResult">He has</p>
+        <input type="button" value="Get Vote Detail" onclick="signerVoteFunc()">
+        <hr>
+        Withdraw <input type="text" id="withdrawText"><input type="button" value="Withdraw" onclick="withdrawBenAmount()">
+    </body>
+</html>
